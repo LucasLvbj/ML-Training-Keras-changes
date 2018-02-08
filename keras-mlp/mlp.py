@@ -31,8 +31,6 @@ y_test = np_utils.to_categorical(y_test)
 model=Sequential()
 model.add(Flatten(input_shape=(img_width,img_height)))
 model.add(Dense(config.hidden_nodes, activation='relu'))
-model.add(Dense(config.hidden_nodes, activation='relu'))
-model.add(Dense(config.hidden_nodes, activation='relu'))
 model.add(Dense(num_classes, activation='softmax'))
 model.compile(loss='categorical_crossentropy', optimizer=config.optimizer,
                     metrics=['accuracy'])

@@ -28,6 +28,7 @@ num_classes = y_train.shape[1]
 y_test = np_utils.to_categorical(y_test)
 
 config.dropout = 0.3
+# config.epochs = 10
 
 # create model
 model=Sequential()

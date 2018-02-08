@@ -11,13 +11,13 @@ from skimage import io
 from skimage import data
 from scipy.signal import convolve2d
 
-image = io.imread(r'C:\Users\blv\PycharmProjects\ML-Training-Keras\keras-cnn\dog.jpg', as_grey=True)
+image = io.imread(r'C:\Users\blv\PycharmProjects\ML-Training-Keras-changes\keras-cnn\dog.jpg', as_grey=True)
 
-kernel = [[0.0, 1.0, 0.0],
-          [0.0, 0.0, 0.0],
-          [0.0, -1.0, 0.0]]
+kernel = [[0.0, 0.0, 0.0],
+          [10.0, 0.0, -10.0],
+          [0.0, 0.0, 0.0]]
 
 new_image = convolve2d(image, kernel)
 new_image = new_image.clip(0.0, 1.0)
 
-io.imsave('out.png', new_image)
+io.imsave(r'C:\Users\blv\PycharmProjects\ML-Training-Keras-changes\keras-cnn\out.png', new_image)
